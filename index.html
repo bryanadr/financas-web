@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Finanças Pessoais</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Meu Controle Financeiro</h1>
+  </header>
+
+  <main class="conteudo-principal">
+    <div class="coluna-esquerda">
+      <section class="resumo">
+        <p id="saldo">Saldo: R$ 0,00</p>
+        <p id="entradas">Entradas: R$ 0,00</p>
+        <p id="saidas">Saídas: R$ 0,00</p>
+      </section>
+
+      <section class="formulario">
+        <form id="form-transacao">
+          <input type="text" id="descricao" placeholder="Descrição" required />
+          <input type="number" id="valor" placeholder="Valor (use negativo p/ saída)" required />
+          <button type="submit">Adicionar</button>
+        </form>
+      </section>
+
+      <section class="historico">
+        <h2>Histórico</h2>
+        <ul id="lista-transacoes"></ul>
+      </section>
+    </div>
+
+    <div class="coluna-direita">
+      <h2>Resumo Gráfico</h2>
+      <canvas id="grafico" width="250" height="250"></canvas>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
